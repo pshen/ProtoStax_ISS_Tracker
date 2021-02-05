@@ -29,7 +29,7 @@ if sys.version_info[0] < 3:
 
 from enum import Enum
 import signal
-import epd2in7b
+import epd2in7
 import epdconfig
 
 from PIL import Image,  ImageDraw,  ImageFont, ImageOps
@@ -115,10 +115,10 @@ def main():
     # API to get ISS Current Location
     URL = 'http://api.open-notify.org/iss-now.json'
 
-    # Initialize and clear the 2in7b (tri-color) display
-    epd = epd2in7b.EPD()
+    # Initialize and clear the 2in7 (black/white) display
+    epd = epd2in7.EPD()
 
-    display = Display(epd2in7b.EPD_HEIGHT, epd2in7b.EPD_WIDTH)
+    display = Display(epd2in7.EPD_HEIGHT, epd2in7.EPD_WIDTH)
 
     # Store positions in list
     positions = []
